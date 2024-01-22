@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- The title of the web page -->
+    <title> Interior Design</title>
+
+    <!-- Linking external stylesheets -->
+    <link rel="stylesheet" href="HeaderFooter.css"> <!-- Stylesheet for header and footer -->
+    <link rel="stylesheet" href="style.css"> <!-- Stylesheet for main content -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Favicon for the website -->
+    <link rel="icon" href="image/images (1).jpeg">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Quiz</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Action 2</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Action 3</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+        <!-- Main content section -->
+        <div class="logincontent">
+            <!-- Title and introductory text -->
+            <h1>Harmony <br><span>Interiors</span></h1>
+            <p class="para">
+                <!-- Introduction about Harmony Interiors -->
+                At Harmony Interiors, we believe that every login is a step closer to realizing your dream space.
+                Just as our designs seamlessly blend style and functionality, your login brings you one step closer to
+                experiencing the exquisite world of interior design.
+                Welcome to a place where your vision and our expertise harmonize to create spaces that reflect
+                your unique personality and aspirations.
+                We're here to make your interior design journey as seamless and inspiring as our designs themselves.
+                Let's begin this journey together and transform your space into a work of art.
+            </p>
+            
+            <!-- Call-to-action button -->
+            <button class="con">JOIN US</button>
+        </div>  
+
+        <!-- Login form section -->
+        <div class="form">
+            <form name="loginForm" onsubmit="return validateForm();">
+                <!-- Login form title -->
+                <h2>Login Here</h2>
+                
+                <!-- Input fields for email and password -->
+                <input type="email" id="email" onkeyup="checkUsernameLength()" name="Email" placeholder="Enter your email">
+                <p id="usernameFeedback"></p>
+                <input type="password" id="password" onkeyup="validateForm()" name="Password" placeholder="Enter your password">
+                <p id="passwordFeedback"></p>
+                
+                <!-- Login button -->
+                <button type="submit" class="button" onclick="func()">Login</button>
+                
+                <!-- Link to sign up -->
+                <p class="link">Don't have an account<br>
+                    Sign up Here
+                </p>
+                
+                <!-- Login with social media icons -->
+                <p class="loginwith">Log in With</p>
+                <div class="icon">
+                    <a href="https://www.facebook.com/PEYZHIXUN"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://www.instagram.com/zhixun_pey/"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-google"></ion-icon>
+                    <ion-icon name="logo-skype"></ion-icon>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- JavaScript files -->
+    <script src="script.js"></script> <!-- Login page functionality -->
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script> <!-- Ionicons library -->
+</body>
+</html>
+
