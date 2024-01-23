@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 :root{
-    --light-purple-color: #8854C0;
+    --light-purple-color: #2b2bff;
     --light-color: #fff;
     --dark-color: #000;
     --grey-color: #f2f2f2;
@@ -26,7 +26,7 @@ body{
     background: var(--light-color);
     padding: 1.5rem 4rem 3rem 4rem;
     width: 600px;
-    height: 680px;
+    height: 800px;
     border-top-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
     position: relative;
@@ -36,8 +36,27 @@ body{
     text-align: center;
     font-size: 2rem;
 }
+
+.quiz-head {
+    text-align: center;
+}
+
+.quiz-title-logo{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.quiz-logo {
+    max-width: 70px;
+    margin: 20px;
+    border-radius: 20px;
+}
+.quiz-title{
+    text-align: center;
+    margin-bottom: 10px;
+}
 .quiz-score{
-    text-align: right;
+    text-align: center;
     font-weight: 600;
     font-size: 1.2rem;
     margin-bottom: 1rem;
@@ -47,6 +66,7 @@ body{
     height: 50px;
     margin: .5rem auto 1rem auto;
     color: var(--light-purple-color);
+    margin-top: 1px;
 }
 .quiz-question{
     font-size: 1.2rem;
@@ -164,6 +184,69 @@ body{
 
 /* Login Page Styling */
 /* Content Styles */
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+}
+
+/* Navigation list styles */
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+/* Navigation link styles */
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+/* Styling for hover effect on navigation links */
+.navbar ul li::after {
+    /* Adds an underline effect */
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+/* Hover styling */
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li:hover {background-color: #f1f1f1}
+.dropdown:hover .dropdown-content {display: block;}
+
+
 .logincontent{
     width: 1200px;
     height: auto;
