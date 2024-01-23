@@ -95,7 +95,20 @@ const _totalQuestion = document.getElementById('total-question');
 
 let correctAnswer = "", correctScore = askedCount = 0, totalQuestion = 10;
 let currentQuestionIndex = 0;
-let questions = [];
+
+let questions = [] ;
+/*const categories = {
+    "Sports": 'https://opentdb.com/api.php?amount=10&category=21&difficulty=medium&type=multiple',
+    "Geography": 'https://opentdb.com/api.php?amount=10&category=22&difficulty=medium&type=multiple',
+    "Animals": 'https://opentdb.com/api.php?amount=10&category=27'
+};
+
+let questions = {
+    "Sports": [],
+    "Geography": [],
+    "Animals": []
+};
+*/
 
 // load question from API
 async function loadQuestion(){
@@ -114,6 +127,23 @@ async function loadQuestion(){
     }
 }
 
+/*async function loadQuestion(){
+let selectedCategory = document.getElementById('categoryDropdown').value;
+if (!questions[selectedCategory] || questions[selectedCategory].length === 0) {
+    const APIUrl = categories[selectedCategory];
+    const result = await fetch(APIUrl);
+    const data = await result.json();
+    questions[selectedCategory] = data.results;
+}
+
+if (currentQuestionIndex < questions[selectedCategory].length) {
+    _result.innerHTML = "";
+    showQuestion(questions[selectedCategory][currentQuestionIndex]);
+} else {
+    restartQuiz();
+}
+}
+*/
 
 
 function eventListeners(){
