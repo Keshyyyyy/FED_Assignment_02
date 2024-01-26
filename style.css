@@ -21,6 +21,8 @@ body{
     font-family: 'Poppins', sans-serif;
     color: var(--dark-color);
     background: var(--grey-color);
+    max-height: 100vh;
+    overflow: hidden;
 }
 .wrapper{
     background: var(--light-color);
@@ -110,6 +112,211 @@ body{
     transform: scale(0.97);
 }
 /* js related */
+
+
+/* Test */
+quiz-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dddfeb;
+  }
+  .quiz-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz-logo {
+    /* Adjust the width and height as needed */
+    width: auto;
+    height: 50px; /* or whatever size you prefer */
+    margin-right: 20px;
+}
+
+.quiz-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    background: black;
+    padding: 30px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 35px;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    text-transform: capitalize;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background: green;
+    color: black;
+    font-size: 14px;
+  }
+
+
+
+  .start-screen .btn {
+    margin-top: 50px;
+  }
+  .hide {
+    display: none;
+  }
+  .timer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .timer .progress {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border: 3px solid black;
+  }
+  .timer .progress .progress-bar {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    background: linear-gradient(to right, #ea517c, #b478f1);
+    transition: 1s linear;
+  }
+  .timer .progress .progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .question-wrapper .number {
+    color: #a2aace;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .question-wrapper .number .total {
+    color: #576081;
+    font-size: 18px;
+  }
+  .question-wrapper .question {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  .answer-wrapper .answer {
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
+  .answer .checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #3f4868;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+  }
+  .answer .checkbox i {
+    color: #fff;
+    font-size: 10px;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  .answer:hover:not(.checked) .checkbox,
+  .answer.selected .checkbox {
+    background-color: #0c80ef;
+    border-color: #0c80ef;
+  }
+  .answer.selected .checkbox i {
+    opacity: 1;
+  }
+  .answer.correct {
+      border-color: #0cef2a;
+  }
+  .answer.wrong {
+    border-color: #fc3939;
+  }
+  .question-wrapper,
+  .answer-wrapper {
+    margin-bottom: 50px;
+  }
+  .btn {
+    width: 100%;
+    height: 60px;
+    background: #0c80ef;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
+  .btn:hover {
+    background: #0a6bc5;
+  }
+  .btn:disabled {
+    background: #576081;
+    cursor: not-allowed;
+  }
+  .btn.next {
+    display: none;
+  }
+  
+  .end-screen .score {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  .score .score-text {
+    color: #a2aace;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 120px;
+  }
 .selected{
     background-color: var(--grey-color)!important;
     color: var(--dark-color)!important;
@@ -186,8 +393,10 @@ body{
 /* Content Styles */
 .navbar {
     width: 85%;
-    margin: auto;
-    padding: 35px 0;
+    margin: 30px;
+    margin-left: 1100px;
+    padding: 50px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -206,7 +415,6 @@ body{
 .navbar ul li a {
     text-decoration: none;
     color: black;
-    text-transform: uppercase;
 }
 
 /* Styling for hover effect on navigation links */
@@ -250,7 +458,7 @@ body{
 .logincontent{
     width: 1200px;
     height: auto;
-    margin: auto;
+    /*margin: auto;*/
     color: purple;
     position: relative;
 }
@@ -262,13 +470,22 @@ body{
     font-family: Arial;
     letter-spacing: 1.2px;
     line-height: 30px;
-    width: 60%;
+    width: 20%;
+}
+
+.image-class {
+    width: 30%;
+    margin: 10px;
+    margin-left: 80px;
+    margin-top: -80px;
+    border-radius: 10px;
 }
 
 .logincontent h1{
     font-family: 'Times New Roman';
     font-size: 50px;
-    padding-left: 20px;
+    margin-left: 600px;
+    /*padding-left: 20px;*/
     margin-top: 1%;
     letter-spacing: 2px;
 }
@@ -303,11 +520,11 @@ body{
 
 .form{
     width: 300px;
-    height: 500px;
+    height: 560px;
     background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
     position: absolute;
-    top: 150px;
-    left: 1100px;
+    top: 30px;
+    left: 1200px;
     color: #fff;
     border-radius: 10px;
     padding: 25px;
@@ -326,7 +543,7 @@ input[type="password"] {
     margin-top: 10px;
     font-size: 12px;
     font-weight: bold;
-    color:#009688;
+    color:green;
     text-align: left;
     margin-left: 15px;
 }
@@ -340,7 +557,7 @@ input[type="password"] {
     margin-top: 10px;
     font-size: 12px;
     font-weight: bold;
-    color: #009688;
+    color: green;
     text-align: left;
     margin-left: 15px;
 }
@@ -376,6 +593,7 @@ input[type="password"] {
     letter-spacing: 1px;
     margin-top: 30px;
     font-family: sans-serif;
+    
 }
 
 /* Focus styles for input fields */
@@ -393,7 +611,7 @@ input[type="password"] {
 .button {
     width: 220px;
     height: 40px;
-    background: #009688;
+    background: green;
     border: none;
     margin-top: 30px;
     font-size: 18px;
@@ -406,7 +624,7 @@ input[type="password"] {
 /* Hover effect for the login button */
 .button:hover {
     background: #fff;
-    color: #009688;
+    color: green;
 }
 
 /* Styles for links within the form */
@@ -420,7 +638,7 @@ input[type="password"] {
 /* Styles for links within the form */
 .form .link a {
     text-decoration: none;
-    color: #009688;
+    color: green;
 }
 
 /* Styling for the 'loginwith' class */
@@ -447,5 +665,5 @@ input[type="password"] {
 
 /* Hover effect for ion-icons */
 .icon ion-icon:hover {
-    color: #009688;
+    color: green;
 }
