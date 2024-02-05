@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-color);
+    background: var(--grey-color);
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+
+
+/* Test */
+quiz-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#0cef2a;
+
+  }
+  .quiz-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.quiz-logo {
+    margin-right: 10px;
+    align-items: center;
+}
+
+.quiz-logo img {
+    height: 50px;
+    width: 50px; 
+    margin-right: 10px;
+    margin-top:-15px;
+}
+
+.quiz-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    background: black;
+    padding: 30px;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 35px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    text-transform: capitalize;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background: green;
+    color: white;
+    font-size: 14px;
+  }
+
+
+
+  .start-screen .btn {
+    margin-top: 50px;
+  }
+  .hide {
+    display: none;
+  }
+  .timer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .timer .progress {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border: 3px solid black;
+  }
+  .timer .progress .progress-bar {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    background: linear-gradient(to right, #ea517c, #b478f1);
+    transition: 1s linear;
+  }
+  .timer .progress .progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .question-wrapper .number {
+    color: #a2aace;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .question-wrapper .number .total {
+    color: #576081;
+    font-size: 18px;
+  }
+  .question-wrapper .question {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  .answer-wrapper .answer {
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
+  .answer .checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #3f4868;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+  }
+  .answer .checkbox i {
+    color: #fff;
+    font-size: 10px;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  .answer:hover:not(.checked) .checkbox,
+  .answer.selected .checkbox {
+    background-color: #0c80ef;
+    border-color: #0c80ef;
+  }
+  .answer.selected .checkbox i {
+    opacity: 1;
+  }
+  .answer.correct {
+      border-color: #0cef2a;
+  }
+  .answer.wrong {
+    border-color: #fc3939;
+  }
+  .question-wrapper,
+  .answer-wrapper {
+    margin-bottom: 50px;
+  }
+  .btn {
+    width: 100%;
+    height: 60px;
+    background: #0c80ef;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
+  .btn:hover {
+    background: #0a6bc5;
+  }
+  .btn:disabled {
+    background: #576081;
+    cursor: not-allowed;
+  }
+  .btn.next {
+    display: none;
+  }
+  
+  .end-screen .score {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  .score .score-text {
+    color: #a2aace;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 120px;
+  }
+.selected{
+    background-color: var(--grey-color)!important;
+    color: var(--dark-color)!important;
+    border-color: var(--grey-color)!important;
+    box-shadow: 0 4px 0 0 #bbbbbb!important;
+}
+.quiz-foot button{
+    border: none;
+    border-radius: 0.5rem;
+    outline: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: .5rem 1rem;    
+    margin: 0 auto 0 auto;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: block;
+    background-color: var(--grey-color);
+    color: var(--dark-color);
+    letter-spacing: 2px;
+    transition: var(--transition);
+    box-shadow: 0 4px 0 0 #bbbbbb;
+}
+.quiz-foot button:hover{
+    background-color: #e6e6e6;
+    box-shadow: 0 4px 0 0 #a7a7a7;
+}
+.quiz-foot button:active{
+    transform: scale(0.95);
+}
+#play-again{
+    display: none;
+}
+#result{
+    padding: .7rem 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+#result i{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    background-color: var(--light-purple-color);
+    color: var(--light-color);
+}
+
+
+
+
+@media(max-width: 678px){
+    .quiz-title{
+        font-size: 1.6rem;
+    }
+    .wrapper{
+        margin: 3rem 0;
+        width: 90%;
+        height: 90%;
+        padding: 1.5rem 1rem 3rem 1rem;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .quiz-foot button{
+        font-size: 1rem;
+    }
+}
+
+/* Styles for the merchandise redemption page */
+.merch-page {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    overflow: auto;
+}
+
+.merch-title {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.merch-page header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.merch-page .merch-container {
+    width: 80%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.merch-page .merch-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.merch-items-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.merch-item {
+    width: calc(25% - 20px); /* Adjust width to fit 4 items per row, accounting for margins */
+    margin: 10px; 
+    flex-direction: column;
+    /* Other existing styles for merch-item */
+}
+
+
+.merch-page .merch-item img {
+    width: 100%; /* Adjust as needed */
+    max-width: 300px; /* Maximum size */
+    height: auto;
+    border-radius: 5px;
+}
+
+.merch-page .merch-item h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.merch-page .merch-item p {
+    color: #666;
+    flex-grow: 1;
+}
+
+.merch-page .merch-item button {
+    background-color: green; /* Green color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1rem;
+    align-self: flex-end;
+    align-self: center;
+    margin-top: 10px;
+}
+
+.merch-page .merch-item button:hover {
+    background-color: #4cae4c; /* Darker green on hover */
+}
+
+.merch-page footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Login Page Styling */
+/* Content Styles */
+.navbar {
+    width: 85%;
+    margin: 30px;
+    margin-left: 1100px;
+    padding: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+}
+
+/* Navigation list styles */
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+/* Navigation link styles */
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Styling for hover effect on navigation links */
+.navbar ul li::after {
+    /* Adds an underline effect */
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+/* Hover styling */
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li:hover {background-color: #f1f1f1}
+.dropdown:hover .dropdown-content {display: block;}
+
+
+.logincontent{
+    width: 1200px;
+    height: auto;
+    /*margin: auto;*/
+    color: purple;
+    position: relative;
+}
+
+/* Paragraph for content styles */
+.logincontent .para{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    width: 20%;
+}
+
+.image-class {
+    width: 30%;
+    margin: 10px;
+    margin-left: 80px;
+    margin-top: -80px;
+    border-radius: 10px;
+}
+
+.logincontent h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    margin-left: 600px;
+    /*padding-left: 20px;*/
+    margin-top: 1%;
+    letter-spacing: 2px;
+}
+
+.logincontent .con{
+    width: 160px;
+    height: 40px;
+    background-color: #009688;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.logincontent .con a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s 
+}
+
+.con:hover{
+    background-color: #fff;
+}
+
+.logincontent span{
+    color:#009688;
+    font-size: 60px;
+}
+
+.form{
+    width: 300px;
+    height: 560px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    position: absolute;
+    top: 30px;
+    left: 700px;
+    color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    margin: auto;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+
+#usernameFeedback {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color:green;
+    text-align: left;
+    margin-left: 15px;
+}
+
+input[type="password"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#passwordFeedback {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: green;
+    text-align: left;
+    margin-left: 15px;
+}
+
+
+.form h2{
+    width: 220px;
+    position: relative;
+    font-family:sans-serif;
+    color:#009688;
+    font-size: 22px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 8px;  
+    right: -10px;
+    text-align: center;
+    
+    
+}
+
+/* Styles for input fields within the form */
+.form input {
+    width: 220px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #009688;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+    
+}
+
+/* Focus styles for input fields */
+.form input:focus {
+    outline: none;
+}
+
+/* Placeholder text style */
+::placeholder {
+    color: white;
+    font-family: Arial;
+}
+
+/* Styles for the login button */
+.button {
+    width: 220px;
+    height: 40px;
+    background: green;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+
+/* Hover effect for the login button */
+.button:hover {
+    background: #fff;
+    color: green;
+}
+
+/* Styles for links within the form */
+.form .link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+/* Styles for links within the form */
+.form .link a {
+    text-decoration: none;
+    color: green;
+}
+
+/* Styling for the 'loginwith' class */
+.loginwith {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Icon link styles */
+.icon a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Icon styles for ion-icons */
+.icon ion-icon {
+    color: white;
+    font-size: 25px;
+    padding-left: 14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+
+/* Hover effect for ion-icons */
+.icon ion-icon:hover {
+    color: green;
+}
