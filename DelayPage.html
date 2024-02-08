@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>BrainWave</title>
+    <!--My own css to enable overriding-->
+    <link rel = "stylesheet" href = "keshy.css">
+    <!--Lottie animation-->
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+</head>
+<body class = "delay-body">
+    <dotlottie-player src="https://lottie.host/07f9600d-e790-4d61-9947-82508c60f8d5/yuZLZUoCtl.json" background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay></dotlottie-player>
+
+    <div class = "Delay-page-text">
+        <h3>This might take a few seconds, hold on !</h3>  <!--this text appears below the lottie animation for the delay page-->
+    </div>
+
+    <!--Redirection inline javascript-->  
+    <script>
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+        //target page from query parameter or it defaults and goes to 'BrainWave Quiz.html'
+        const targetPage = getQueryParam('target') || 'BrainWave Quiz.html';
+
+        setTimeout(function() {
+            window.location.href = targetPage; 
+        }, 2000);  //the buffer page lasts for 2 seconds, we can adjust the timing to our liking
+    </script>
+</body>
+</html>
