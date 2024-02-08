@@ -105,7 +105,7 @@ https://www.youtube.com/watch?v=30PvYhVKNGg
 https://www.youtube.com/watch?v=YOb67OKw62s
 https://www.youtube.com/watch?v=ioVseYQgBK4&pp=ygUpaG93IHRvIHVzZSBwcmVsb2FkZXIgaW4gaHRtbCB1c2luZyBsb3R0aWU%3D
 
-Media Creadits:
+Media Credits:
 https://i.pinimg.com/originals/4b/65/28/4b65285a3d31f68d1350e8b23c19ddd7.gif
 https://i.pinimg.com/564x/04/bc/fc/04bcfcac0ddd27d7f558596a1022a4d0.jpg
 https://i.pinimg.com/564x/59/d0/24/59d024fb7291d2b7c7972a7d1a55c06c.jpg
