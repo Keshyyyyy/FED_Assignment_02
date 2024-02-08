@@ -24,11 +24,11 @@ How our idea helps achieve this goal?
 Well, we have implemented changes and gamification features which we believe would keep the users engaged in the learning process which will be explained in the below sections under "Features".
 
 
-Link to our initial prototype is attached below:
-https://www.figma.com/file/SdLnoXtWzLSZN61tvu8TPC/Prototype-for-trivia-game?type=design&node-id=0%3A1&mode=design&t=feDF4CFRFApN5zXl-1
+Link to our initial prototype is attached below:<br/>
+https://www.figma.com/file/SdLnoXtWzLSZN61tvu8TPC/Prototype-for-trivia-game?type=design&node-id=0%3A1&mode=design&t=feDF4CFRFApN5zXl-1<br/>
 
-Link to final prototype is attached below:
-https://www.figma.com/file/SdLnoXtWzLSZN61tvu8TPC/Prototype-for-trivia-game?type=design&node-id=0%3A1&mode=design&t=RCtXK7piQ4hh7LIw-1
+Link to final prototype is attached below:<br/>
+https://www.figma.com/file/SdLnoXtWzLSZN61tvu8TPC/Prototype-for-trivia-game?type=design&node-id=0%3A1&mode=design&t=RCtXK7piQ4hh7LIw-1<br/>
 
 
 Features to be implemented:
